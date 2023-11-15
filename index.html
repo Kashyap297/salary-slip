@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="asset/css/all.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="asset/css/style.css">
+
+    <!-- bootstrap Css -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+</head>
+
+<body>
+    <section class="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body">
+                            <h3 class="text-center gray-color">Employees Details</h3>
+                            <div class="emp-details mt-4">
+                                <div class="table-responsive">
+                                    <table class="table table-striped mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th scope="col" class="purple-dk-clr fw-bold">No.</th>
+                                                <th scope="col" class="purple-dk-clr fw-bold">Empl. Name</th>
+                                                <th scope="col" class="purple-dk-clr fw-bold">Employee ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>Vikas Borse</td>
+                                                <td class="gray-lt-color">E05</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.</td>
+                                                <td>Priyanshu Mishra</td>
+                                                <td class="gray-lt-color">E06</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.</td>
+                                                <td>Om Prakash Jat</td>
+                                                <td class="gray-lt-color">E19</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.</td>
+                                                <td>Kashyap Chauhan</td>
+                                                <td class="gray-lt-color">E29</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5.</td>
+                                                <td>Dev Chauhan</td>
+                                                <td class="gray-lt-color">E30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6.</td>
+                                                <td>Jay Nandarbarwala</td>
+                                                <td class="gray-lt-color">E31</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="empl-home p-5">
+                        <div class="employee-img mb-5 text-center">
+                            <img src="asset/images/add-employee-f7b147ac446fe951044595d9910d9c55.svg" class="emp-img"
+                                alt="">
+                        </div>
+                        <div class="emp-headline">
+                            <h3 class="text-center gray-color fw-bold">Get Your Employees Salary-Slip</h3>
+                            <p class="gray-lt-color text-center mt-3">Capture all necessary details about your employees
+                                and manage their salary, allowances and reimbursement details in this module.</p>
+                            <div class="form">
+                                <div class="form-floating my-5 ms-5 d-flex justify-content-around">
+                                    <input type="text" class="form-control shadow" id="employeeNo"
+                                        placeholder="Employees ID" required>
+                                    <label for="floatingInput">Employee ID :</label>
+                                    <button type="submit" class="shadow" onclick="checkUser()">Submit</button>
+                                </div>
+                                <p id="result" class="text-danger text-center"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="salary-home">
+        <div class="container">
+            <div class="salary-page w-75 m-auto p-4 shadow-lg">
+                <div class="salary-layout border p-3">
+                    <div class="page-head bg-blue">
+                        <p class="fs-3 text-center">Employee Salary Slip : Aug - 2023</p>
+                    </div>
+                    <div class="about-co border-bottom">
+                        <div class="d-flex">
+                            <div class="co-detail">
+                                <h5 class="fw-bolder gray-color">Anmol Graphics</h5>
+                                <p class="gray-lt-color">A-202, Ground Floor,<br> Rajhans Ecofutuers, Vesu, Surat -
+                                    395001</p>
+                            </div>
+                            <div class="co-img text-end">
+                                <img src="asset/images/logo.jpg" alt="" width="32%" class="mt-3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emp-detail py-2 border-bottom">
+                        <h5 class="mb-3">Employee Pay Summary</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="d-flex justify-content-between align-items-center me-5 mb-1">
+                                    <p class="m-0">Employee Name : </p>
+                                    <span class="gray-lt-color" id="name"></span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center me-5 mb-1">
+                                    <p class="m-0">Employee No. : </p>
+                                    <span class="gray-lt-color" id="emp-no"></span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center me-5 mb-1">
+                                    <p class="m-0">Designation : </p>
+                                    <span class="gray-lt-color" id="desig"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex justify-content-between align-items-center ms-5 mb-1">
+                                    <p class="m-0">Date of Join : </p>
+                                    <span class="gray-lt-color" id="jod"></span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center ms-5 mb-1">
+                                    <p class="m-0">Department. : </p>
+                                    <span class="gray-lt-color" id="dept"></span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center ms-5 mb-1">
+                                    <p class="m-0">Bank A/c No. : </p>
+                                    <span class="gray-lt-color" id="bankacc"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="col-6">
+                            <table class="table border mt-3">
+                                <thead>
+                                    <tr>
+                                        <th class="purple-dk-clr text-start fw-bold">Earnings</th>
+                                        <th class="purple-dk-clr fw-bold">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start border-0 pb-0">Basic Salary</td>
+                                        <td class="text-center border-0 pb-0 gray-lt-color" id="salary"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start border-0 pb-0">House Rent Allowances</td>
+                                        <td class="text-center border-0 pb-0 gray-lt-color" id="houseAll"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start border-0 pb-0">Dearness Allowances</td>
+                                        <td class="text-center border-0 pb-0 gray-lt-color" id="dearAll"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start border-0 pb-0">Medical Allowances</td>
+                                        <td class="text-center border-0 pb-0 gray-lt-color" id="medAll"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start border-0 pb-0">Special Allowances</td>
+                                        <td class="text-center border-0 pb-0 gray-lt-color" id="spcAll"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start border-0 pb-2">Other Allowances</td>
+                                        <td class="text-center border-0 pb-2 gray-lt-color" id="othAll"></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="border-top">
+                                    <tr>
+                                        <td class="text-start blue-color">Gross Salary</td>
+                                        <td class="blue-color fw-bolder" id="earning"></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="col-6">
+                            <table class="table border border-start-0 mt-3">
+                                <thead>
+                                    <tr>
+                                        <th class="purple-dk-clr text-start fw-bold">Deductions</th>
+                                        <th class="purple-dk-clr fw-bold">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start border-0 pb-0">EPF</td>
+                                        <td class="text-center border-0 pb-0 gray-lt-color" id="provFund"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start border-0 pb-0">Health Insurance</td>
+                                        <td class="text-center border-0 pb-0 gray-lt-color" id="healthIns"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start border-0 pb-0">Professional Tax</td>
+                                        <td class="text-center border-0 pb-0 gray-lt-color" id="profTax"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start border-0 pbn-4">TDS</td>
+                                        <td class="text-center  border-0 pbn-4 gray-lt-color" id="tds"></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="border-top extra-margin">
+                                    <tr>
+                                        <td class="text-start blue-color">Total Deductions</td>
+                                        <td class="blue-color fw-bolder" id="deduct"></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="footer bg-blue">
+                        <div class="d-flex m-0 align-items-center justify-content-around">
+                            <h3 class="p-2 mb-0">Total Net Payable : </h3>
+                            <span class="fs-3" id="NetPayable"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    function submit() {
+        document.querySelector('.home').style.display = 'none'
+        document.querySelector('.salary-home').style.display = 'flex'
+        document.querySelector('body').style.display = 'block'
+    }
+
+    const userDetail = [
+        {
+            name: "Vikas Borse",
+            employeeNo: "E05",
+            designation: "Auditor",
+            joindate: "01-01-2016",
+            department: "Finance",
+            bankAccount: "05111998",
+            salary: 19000
+        },
+        {
+            name: "Priyanshu Mishra",
+            employeeNo: "E06",
+            designation: "Manager",
+            joindate: "01-06-2019",
+            department: "Operation",
+            bankAccount: "06112002",
+            salary: 17500
+        },
+        {
+            name: "Om Prakash Jat",
+            employeeNo: "E19",
+            designation: "Managing Director",
+            joindate: "19-07-2012",
+            department: "H.O.D",
+            bankAccount: "19072001",
+            salary: 32000
+        },
+        {
+            name: "Kashyap Chauhan",
+            employeeNo: "E29",
+            designation: "C.E.O.",
+            joindate: "01-08-2015",
+            department: "Head Office",
+            bankAccount: "29072000",
+            salary: 35000
+        },
+        {
+            name: "Dev Chauhan",
+            employeeNo: "E30",
+            designation: "Technical Assistant",
+            joindate: "15-04-2013",
+            department: "Technical",
+            bankAccount: "01012003",
+            salary: 9900
+        },
+        {
+            name: "Jay Nandarbarwala",
+            employeeNo: "E31",
+            designation: "H.R.",
+            joindate: "21-12-2022",
+            department: "Human Resource Department",
+            bankAccount: "02092020",
+            salary: 8500
+        },
+    ]
+
+    let currentUser = null;
+
+    function userValidate(id) {
+        return userDetail.find(
+            (user) => user.employeeNo === id
+        );
+    }
+
+    function checkUser() {
+        const employeeNo = document.getElementById("employeeNo").value;
+
+        currentUser = userValidate(employeeNo)
+
+        if (currentUser) {
+            submit();
+            document.getElementById('name').innerHTML = currentUser.name
+            document.getElementById('emp-no').innerHTML = currentUser.employeeNo
+            document.getElementById('desig').innerHTML = currentUser.designation
+            document.getElementById('jod').innerHTML = currentUser.joindate
+            document.getElementById('dept').innerHTML = currentUser.department
+            document.getElementById('bankacc').innerHTML = currentUser.bankAccount
+            document.getElementById('salary').innerHTML = currentUser.salary
+            trial()
+
+        } else {
+            document.getElementById('result').innerHTML = "Invalid Employee ID";
+        }
+    }
+
+    function trial() {
+        const profTax = 200;
+        const healthIns = 1800;
+        if (currentUser.salary <= 10000) {
+            // earning
+            var houseAll = currentUser.salary * 0.2
+            document.getElementById('houseAll').innerHTML = houseAll
+            var dearAll = currentUser.salary * 0.8
+            document.getElementById('dearAll').innerHTML = dearAll
+            var medAll = currentUser.salary * 0.15
+            document.getElementById('medAll').innerHTML = medAll
+            var spcAll = currentUser.salary * 0.1
+            document.getElementById('spcAll').innerHTML = spcAll
+            var othAll = currentUser.salary * 0.05
+            document.getElementById('othAll').innerHTML = othAll
+            // deduction
+            var provFund = currentUser.salary * 0.08
+            document.getElementById('provFund').innerHTML = provFund
+            var tds = currentUser.salary * 0.12
+            document.getElementById('tds').innerHTML = tds
+            document.getElementById('profTax').innerHTML = profTax
+            document.getElementById('healthIns').innerHTML = healthIns
+            // total
+            var earning = currentUser.salary + houseAll + dearAll + medAll + spcAll + othAll;
+            document.getElementById('earning').innerHTML = earning
+
+            var deduct = provFund + tds + profTax + healthIns
+            document.getElementById('deduct').innerHTML = deduct
+
+            var NetPayable = earning - deduct
+            document.getElementById('NetPayable').innerHTML = NetPayable + "/-"
+
+        } else if (currentUser.salary > 10000 && currentUser.salary <= 20000) {
+            // earning
+            var houseAll = currentUser.salary * 0.25
+            document.getElementById('houseAll').innerHTML = houseAll
+            var dearAll = currentUser.salary * 0.9
+            document.getElementById('dearAll').innerHTML = dearAll
+            var medAll = currentUser.salary * 0.15
+            document.getElementById('medAll').innerHTML = medAll
+            var spcAll = currentUser.salary * 0.1
+            document.getElementById('spcAll').innerHTML = spcAll
+            var othAll = currentUser.salary * 0.05
+            document.getElementById('othAll').innerHTML = othAll
+            // deduction
+            var provFund = currentUser.salary * 0.12
+            document.getElementById('provFund').innerHTML = provFund
+            var tds = currentUser.salary * 0.15
+            document.getElementById('tds').innerHTML = tds
+            document.getElementById('profTax').innerHTML = profTax
+            document.getElementById('healthIns').innerHTML = healthIns
+            // total
+            var earning = currentUser.salary + houseAll + dearAll + medAll + spcAll + othAll;
+            document.getElementById('earning').innerHTML = earning
+
+            var deduct = provFund + tds + profTax + healthIns
+            document.getElementById('deduct').innerHTML = deduct
+
+            var NetPayable = earning - deduct
+            document.getElementById('NetPayable').innerHTML = NetPayable + "/-"
+        }
+        else {
+            // earning
+            var houseAll = currentUser.salary * 0.3
+            document.getElementById('houseAll').innerHTML = houseAll
+            var dearAll = currentUser.salary * 0.95
+            document.getElementById('dearAll').innerHTML = dearAll
+            var medAll = currentUser.salary * 0.15
+            document.getElementById('medAll').innerHTML = medAll
+            var spcAll = currentUser.salary * 0.1
+            document.getElementById('spcAll').innerHTML = spcAll
+            var othAll = currentUser.salary * 0.05
+            document.getElementById('othAll').innerHTML = othAll
+            // deduction
+            // var provFund = null
+            document.getElementById('provFund').innerHTML = "N.A."
+            var tds = currentUser.salary * 0.15
+            document.getElementById('tds').innerHTML = tds
+            document.getElementById('profTax').innerHTML = profTax
+            document.getElementById('healthIns').innerHTML = healthIns
+            // total
+            var earning = currentUser.salary + houseAll + dearAll + medAll + spcAll + othAll;
+            document.getElementById('earning').innerHTML = earning
+
+            var deduct = tds + profTax + healthIns
+            document.getElementById('deduct').innerHTML = deduct
+
+            var NetPayable = earning - deduct
+            document.getElementById('NetPayable').innerHTML = NetPayable + "/-"
+        }
+        // else if (salary > 10000 && salary <= 20000) {
+        //     var hra = 25
+        //     var deara = 90
+        //     var medi = 
+        //     var sp = 
+        //     var oth = 
+
+
+        //     var pf = 12
+        //     var pt = 200
+        //     var hi = 1800
+        // } else if (salary > 20000) {
+        //     var hra = 30
+        //     var deara = 95
+        //     var medi = 
+        //     var sp = 
+        //     var oth = 
+
+
+        //     var pf = 
+        //     var pt = 200
+        //     var hi = 1800
+        // }
+    }
+
+</script>
+
+</html>

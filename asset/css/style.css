@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+:root{
+    --prpl-color : #adc4ff;
+    --prpl-dark : #6e6ccf;
+    --gray-color: #44475B;
+    --blue-color: #2a569c;
+    --gray-lt-color: #44475bde;
+}
+.bg-blue{
+    background-color: #7194ecc9;
+    color: white;
+}
+.purple-clr{
+    color: var(--prpl-color) !important;
+}
+.purple-dk-clr{
+    color: var(--prpl-dark) !important;
+}
+.prpl-border{
+    border: 1px solid var(--prpl-dark) !important;
+}
+.gray-color {
+    color: var(--gray-color) !important;
+}
+.blue-color {
+    color: var(--blue-color) !important;
+}
+.gray-lt-color{
+    color: var(--gray-lt-color) !important;
+}
+.emp-img{
+    width: 600px;
+    height: 250px;
+}
+button{
+    padding: 7px 20px;
+    color : white;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
+    background-color: #93a1da;
+    border-radius: 10px !important;
+    border: 1px border var(--prpl-dark) !important;
+}
+button:active {
+    transform: translateY(1px);
+    transition: all 0.1s ease-in-out;
+}
+.salary-home{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.pbn-4{
+    padding-bottom: 4.5rem !important;
+}
